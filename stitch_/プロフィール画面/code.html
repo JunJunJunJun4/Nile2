@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>マイページ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#36a4f2",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101b22",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans JP", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10 p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800">
+<div class="flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined text-slate-800 dark:text-slate-200">arrow_back</span>
+</div>
+<h2 class="text-slate-800 dark:text-slate-200 text-lg font-bold leading-tight tracking-[-0.015em] flex-1">マイページ</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-slate-800 dark:text-slate-200 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0 hover:bg-slate-200 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+<!-- Header Image / Cover Image -->
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden min-h-[200px]" data-alt="Blue sky with soft white clouds as seen from an airplane window" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3isFyyUCDwxPqbs0f1nFNSqo-DO8pEY0A5xP4hMXQ-m22hpgrF4xKMrKOpUV_07A2d0pB6javKhe7hMfhs7utNGrU8xbEHsW3HQ9Ee8De9KC_tJKvxU3fH51wqQPIYo9_y2x2ZSaAyzF2WNEg7ffrCdxaGXr14ThC7Yh16iuw1dtwJ-mTDmupN35RzSM7b8Gjw3n0Hu64nW_k7SqbnUfFeyrQy_hiBIBqZeJYvt_aauGgtT-8UmtJpcay-Rf7I3K2qjFbS6QrcGs");'></div>
+<!-- Profile Header Section -->
+<div class="px-4">
+<div class="flex justify-between items-start -mt-16">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 border-4 border-background-light dark:border-background-dark" data-alt="A smiling user's avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQx_d4VvaWZQ-P9poAEvJIBPrnzrGcAbmFjq3ZZK6kxj-2K0zRXF6ow9SysRbgdI-_ZliMQSTMN8iScj7YxPexH8R8o3cJQpX24PFNIYAkpEgccMzNy-3G9nxWd8eFFXlBlD9kmcXdrpeqD2P0A9e1Wbq3eme-Ho-XsZRDoNIZBrgYOoniQVSyqKSgQlpEp1E36NMnQwcWzecFOOm-DEQLJLUlASAMiRsgWWv1Jc4N36LHHrTTleLTrXSg9wLFmQZyu907pUCwXUk");'></div>
+<button class="flex mt-20 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90">
+<span class="truncate">プロフィール編集</span>
+</button>
+</div>
+<div class="flex flex-col pt-4">
+<p class="text-slate-900 dark:text-slate-50 text-[22px] font-bold leading-tight tracking-[-0.015em]">Gakushu Taro</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">@gakushu-taro</p>
+</div>
+</div>
+<!-- Body Text / Bio -->
+<p class="text-slate-800 dark:text-slate-200 text-base font-normal leading-normal pt-3 px-4">
+      新しい言語を学ぶのが大好きです。毎日コツコツ学習中！目標は海外で不自由なくコミュニケーションを取ることです。よろしくお願いします！
+    </p>
+<!-- Stats Section -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4">
+<div class="flex flex-col gap-1 rounded-lg p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal">正答率</p>
+<p class="text-slate-900 dark:text-slate-50 tracking-light text-2xl font-bold leading-tight">85%</p>
+</div>
+<div class="flex flex-col gap-1 rounded-lg p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal">総解答数</p>
+<p class="text-slate-900 dark:text-slate-50 tracking-light text-2xl font-bold leading-tight">350</p>
+</div>
+<div class="flex flex-col gap-1 rounded-lg p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal">総学習時間</p>
+<p class="text-slate-900 dark:text-slate-50 tracking-light text-2xl font-bold leading-tight">12時間</p>
+</div>
+</div>
+<!-- Tab Navigation -->
+<div class="border-b border-slate-200 dark:border-slate-800">
+<div class="flex justify-around items-center px-4">
+<button class="relative flex-1 text-center py-4 text-sm font-bold text-primary border-b-2 border-primary">ブックマーク</button>
+<button class="flex-1 text-center py-4 text-sm font-bold text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50">作成したクイズ</button>
+<button class="flex-1 text-center py-4 text-sm font-bold text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50">アクティビティ</button>
+</div>
+</div>
+<!-- Content List -->
+<div class="flex flex-col">
+<!-- Item 1 -->
+<div class="border-b border-slate-200 dark:border-slate-800 p-4 hover:bg-slate-100 dark:hover:bg-slate-800/50 cursor-pointer">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mt-1">bookmark</span>
+<div class="flex flex-col">
+<p class="text-slate-500 dark:text-slate-400 text-sm">ビジネス英会話 - Chapter 3</p>
+<h3 class="font-bold text-slate-900 dark:text-slate-50">ミーティングで使える表現 Part 2</h3>
+<p class="text-slate-700 dark:text-slate-300 mt-1 text-sm">相手の意見に賛成・反対するときのフレーズをマスターしよう。</p>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="border-b border-slate-200 dark:border-slate-800 p-4 hover:bg-slate-100 dark:hover:bg-slate-800/50 cursor-pointer">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mt-1">bookmark</span>
+<div class="flex flex-col">
+<p class="text-slate-500 dark:text-slate-400 text-sm">日常会話 - Level 2</p>
+<h3 class="font-bold text-slate-900 dark:text-slate-50">レストランでの注文</h3>
+<p class="text-slate-700 dark:text-slate-300 mt-1 text-sm">アレルギーや好みを伝えるための応用的な表現集。</p>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="border-b border-slate-200 dark:border-slate-800 p-4 hover:bg-slate-100 dark:hover:bg-slate-800/50 cursor-pointer">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mt-1">bookmark</span>
+<div class="flex flex-col">
+<p class="text-slate-500 dark:text-slate-400 text-sm">TOEIC対策 - Part 5</p>
+<h3 class="font-bold text-slate-900 dark:text-slate-50">文法問題: 関係代名詞の用法</h3>
+<p class="text-slate-700 dark:text-slate-300 mt-1 text-sm">主格、目的格、所有格の使い分けを再確認するための問題セット。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

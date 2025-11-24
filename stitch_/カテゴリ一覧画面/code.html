@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>カテゴリ選択</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#36a4f2",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101b22",
+                        "text-light-primary": "#1f2937",
+                        "text-light-secondary": "#6b7280",
+                        "text-dark-primary": "#e5e7eb",
+                        "text-dark-secondary": "#9ca3af",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#374151"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans JP", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex h-14 items-center justify-between border-b border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 px-4 backdrop-blur-sm">
+<button class="flex size-10 items-center justify-center rounded-full text-text-light-primary dark:text-text-dark-primary">
+<span class="material-symbols-outlined text-2xl">person</span>
+</button>
+<h1 class="text-lg font-bold text-text-light-primary dark:text-text-dark-primary">カテゴリを選択</h1>
+<button class="flex size-10 items-center justify-center rounded-full text-text-light-primary dark:text-text-dark-primary">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1">
+<div class="flex flex-col">
+<!-- List Item 1: 歴史 -->
+<div class="flex cursor-pointer items-center gap-4 border-b border-border-light dark:border-border-dark px-4 py-3 transition-colors hover:bg-black/5 dark:hover:bg-white/5">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">history_edu</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-base font-bold text-text-light-primary dark:text-text-dark-primary">歴史</p>
+<p class="text-sm font-normal text-text-light-secondary dark:text-text-dark-secondary">日本史、世界史などに関するクイズ。</p>
+<p class="mt-1 text-xs font-normal text-text-light-secondary dark:text-text-dark-secondary">クイズ: 25個</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-2xl text-text-light-secondary dark:text-text-dark-secondary">chevron_right</span>
+</div>
+</div>
+<!-- List Item 2: 科学 -->
+<div class="flex cursor-pointer items-center gap-4 border-b border-border-light dark:border-border-dark px-4 py-3 transition-colors hover:bg-black/5 dark:hover:bg-white/5">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">science</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-base font-bold text-text-light-primary dark:text-text-dark-primary">科学</p>
+<p class="text-sm font-normal text-text-light-secondary dark:text-text-dark-secondary">物理、化学、生物の基礎知識。</p>
+<p class="mt-1 text-xs font-normal text-text-light-secondary dark:text-text-dark-secondary">クイズ: 18個</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-2xl text-text-light-secondary dark:text-text-dark-secondary">chevron_right</span>
+</div>
+</div>
+<!-- List Item 3: プログラミング -->
+<div class="flex cursor-pointer items-center gap-4 border-b border-border-light dark:border-border-dark px-4 py-3 transition-colors hover:bg-black/5 dark:hover:bg-white/5">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">code</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-base font-bold text-text-light-primary dark:text-text-dark-primary">プログラミング</p>
+<p class="text-sm font-normal text-text-light-secondary dark:text-text-dark-secondary">PythonやJavaScriptの基本を学ぶ。</p>
+<p class="mt-1 text-xs font-normal text-text-light-secondary dark:text-text-dark-secondary">クイズ: 32個</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-2xl text-text-light-secondary dark:text-text-dark-secondary">chevron_right</span>
+</div>
+</div>
+<!-- List Item 4: 語学 -->
+<div class="flex cursor-pointer items-center gap-4 border-b border-border-light dark:border-border-dark px-4 py-3 transition-colors hover:bg-black/5 dark:hover:bg-white/5">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">translate</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-base font-bold text-text-light-primary dark:text-text-dark-primary">語学</p>
+<p class="text-sm font-normal text-text-light-secondary dark:text-text-dark-secondary">英単語や基本フレーズ。</p>
+<p class="mt-1 text-xs font-normal text-text-light-secondary dark:text-text-dark-secondary">クイズ: 45個</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-2xl text-text-light-secondary dark:text-text-dark-secondary">chevron_right</span>
+</div>
+</div>
+<!-- List Item 5: 雑学 -->
+<div class="flex cursor-pointer items-center gap-4 border-b border-border-light dark:border-border-dark px-4 py-3 transition-colors hover:bg-black/5 dark:hover:bg-white/5">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-base font-bold text-text-light-primary dark:text-text-dark-primary">雑学</p>
+<p class="text-sm font-normal text-text-light-secondary dark:text-text-dark-secondary">日常で役立つ豆知識。</p>
+<p class="mt-1 text-xs font-normal text-text-light-secondary dark:text-text-dark-secondary">クイズ: 50個</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-2xl text-text-light-secondary dark:text-text-dark-secondary">chevron_right</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="sticky bottom-0 z-10 flex h-16 items-center justify-around border-t border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-xs font-medium">ホーム</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-light-secondary dark:text-text-dark-secondary" href="#">
+<span class="material-symbols-outlined text-2xl">bar_chart</span>
+<span class="text-xs font-medium">進捗</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-light-secondary dark:text-text-dark-secondary" href="#">
+<span class="material-symbols-outlined text-2xl">workspace_premium</span>
+<span class="text-xs font-medium">実績</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-light-secondary dark:text-text-dark-secondary" href="#">
+<span class="material-symbols-outlined text-2xl">settings</span>
+<span class="text-xs font-medium">設定</span>
+</a>
+</footer>
+</div>
+</body></html>

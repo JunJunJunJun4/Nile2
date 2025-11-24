@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>学習アプリホーム</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#36a4f2",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101b22",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#e0f7ff] dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full max-w-xl mx-auto flex-col bg-white dark:bg-[#15202b] group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-white/80 dark:bg-[#15202b]/80 p-4 pb-2 justify-between backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">search</span>
+<input class="w-full h-12 pl-10 pr-4 rounded-full bg-slate-100 dark:bg-slate-800 border-transparent focus:border-primary focus:ring-primary text-slate-800 dark:text-slate-200" placeholder="クイズやカテゴリを検索" type="search"/>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="relative flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 w-12 bg-transparent text-[#0d161c] dark:text-slate-200 gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<!-- Notification Badge -->
+<div class="absolute top-2 right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs font-bold text-white">2</div>
+</button>
+</div>
+</header>
+<!-- Tabs -->
+<div class="pb-3 border-b border-slate-200 dark:border-slate-800">
+<div class="flex justify-between">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-[#0d161c] dark:text-slate-50 pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">フォロー中</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-slate-500 dark:text-slate-400 pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">おすすめ</p>
+</a>
+</div>
+</div>
+<main class="flex-grow">
+<!-- Card 1 -->
+<div class="p-4 @container border-b border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-stretch justify-start rounded-lg @xl:flex-row @xl:items-start">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Abstract image of historical artifacts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDp9Sk2nzHNxanqENCeFU_BB3sGHS7RD5e6EIAVZDdPZT-15S_bWW0G59TsEkGffZvxSvwXW1xoN_UnZNX5ELn_WvrFJBcQZpt1BYeYHuHSmegDoroNpJurPRoaCCSi5yGXLBlTYgSp7pGRHAFtEpWNJXy5JyVwzt1EzrAiIw8wo73No47rGo1ZxreHGud-LX536bSHDgpFWxU1ZkfEcViVl1rh1S1XYjUkM9oAixpYPkkLe_doxIx0FP4BaW7mak6nPunxcJlO2NU");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">歴史</p>
+<p class="text-[#0d161c] dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em]">新しいクイズが追加されました！</p>
+<div class="flex items-end gap-3 justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">歴史カテゴリに新しいクイズが追加されました。</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">挑戦する</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-4 @container border-b border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-stretch justify-start rounded-lg @xl:flex-row @xl:items-start">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Laptop with code on the screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWYCQ1Ysplib0BL2SAbWxtrU9zBt25NYrbWnaMU3LmPAAHg4EJgHDKeY_8t3pvvZvTLpH7OJICJjGC4NKpfO6fImsMn9ocptUS-0l3h-R4ewy5aB7WvW3N71tcop950ysxZHkMQoE80zJ5uRTabLr0eIcFnw0cLifOVjomTLTs8Bfr4aauW8rOV_jS6T5wAb1pLHQVKZNzi0z1wy4HQu_BGUL6Wp7ZOVY3Hb10X1Y9-bdymJn-tVYNAB_b3PoxexDHKnO1THJ9rnU");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">あなたへのおすすめ</p>
+<p class="text-[#0d161c] dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em]">プログラミングの基礎</p>
+<div class="flex items-end gap-3 justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">学習履歴に基づき、このクイズをおすすめします。</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">挑戦する</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-4 @container border-b border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-stretch justify-start rounded-lg @xl:flex-row @xl:items-start">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="World map with pins on various capitals" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBULJHPnUGvLOB8DGRxU8MTMvOwoFGaZtELSEKDVOcjwuVksB_ZEVT_XyPrLFK6SOHl5YRIwLM8ZpBrDu0DFKwUPKZui15hv2nOMjvb0IqrfxCLfO-bLsVZyxrmO0zz7Bz8pkkMTdgoP0p7yNYEALU2UjqCL8Nh-8uS307z6-M2PiDoeYejv95OhBGUQ5Z2pBKGXDYZcnRWOWBRg8BlwCd0tABwMXj-3X6XmwXdvywWoPLceSCYI6swbq2kF6PYPcP8F63uyYLamV0");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">最近のアクティビティ</p>
+<p class="text-[#0d161c] dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em]">昨日、「世界の首都」で80%の正答率を達成しました！</p>
+<!-- Progress Bar -->
+<div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5 my-2">
+<div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
+</div>
+<div class="flex items-end gap-3 justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">素晴らしい！次回は満点を目指しましょう。</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-primary/20 dark:bg-primary/30 text-primary dark:text-blue-300 text-sm font-medium leading-normal">
+<span class="truncate">復習する</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-4 @container border-b border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-stretch justify-start rounded-lg @xl:flex-row @xl:items-start">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Lightbulb and gear icons" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDA4AEKoekEAMFIWankeB0WC3grmpVdgu2fcqmO4bYovzq8cns3tw7_Hdd_Z_7XOGoXeIoOutjPv8Hu1OhHKlRcpxotOS1aTbyr1ORAP8tLT8TNlaRgEeTHXN-Ug90Ysa2L4j8oBAqgV_lNEyiEWgi2pTVHUDHXzuZBlVvLObIsmH8U-nSa7Hm16Z4l_iD2XX7gLjnIN1bXiiRP_VDfhLEFF5_RinTd0-2MHQt6j4nTLH9Kte2mkWv5dRBUJiI2Nl1ZvhjCfLnx0ng");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">お知らせ</p>
+<p class="text-[#0d161c] dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em]">新しい学習機能が追加されました</p>
+<div class="flex items-end gap-3 justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">あなたの学習体験を向上させる新機能です。</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">続きを読む</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 flex h-14 w-14 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary text-white shadow-lg z-20">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Navigation -->
+<footer class="sticky bottom-0 z-10 bg-white/80 dark:bg-[#15202b]/80 backdrop-blur-sm border-t border-slate-200 dark:border-slate-800">
+<div class="flex justify-around p-2">
+<a class="flex flex-col items-center justify-center w-full h-14 text-primary" href="#">
+<span class="material-symbols-outlined fill text-2xl">home</span>
+<span class="text-xs font-bold">ホーム</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-14 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">history</span>
+<span class="text-xs">学習履歴</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-14 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">settings</span>
+<span class="text-xs">設定</span>
+</a>
+</div>
+</footer>
+</div>
+</body></html>

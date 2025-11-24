@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>結果を共有する</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#36a4f2",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101b22",
+              "text-light": "#0d161c",
+              "text-dark": "#f0f6fc",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1a2833",
+              "border-light": "#e7eef3",
+              "border-dark": "#2d3f4c",
+              "subtle-light": "#4b799b",
+              "subtle-dark": "#94a3b8"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Noto Sans JP", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark sticky top-0 z-10 border-b border-border-light dark:border-border-dark">
+<div class="flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark text-2xl">close</span>
+</div>
+<h2 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">結果を共有する</h2>
+<div class="w-10"></div>
+</div>
+<!-- Main Content -->
+<main class="flex-grow px-4 pt-6 pb-24">
+<!-- Image Preview -->
+<div class="w-full @container">
+<div class="w-full gap-1 overflow-hidden rounded-xl border border-border-light dark:border-border-dark @[480px]:gap-2 aspect-[9/10] flex shadow-sm">
+<div class="w-full bg-center bg-no-repeat bg-cover aspect-auto flex-1" data-alt="A preview image of the test result, showing a score of 95/100, the test name 'Advanced Vocabulary Quiz', and a graphical representation of the score with a light blue and white abstract background." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtZ_lUCdAkfDdXyPqF3g3EQK1cJyPQ1zn3e_VuqVZ8WMepILhOR6xDMf43-VbhpPA6GZyupIWDtCW6GIEMtE_V4efihmmzgTeaDdzTs70jVFCj2M3GVZaT2EQ23Peb_bYCHGjZO_fwQI1pj9nZ_kdRYVA2ycAEyBZHDhyLFTytQxY_vT0PP_Ooo3a_ctuufiWSavWZ6VV9hqikzACk16FI4RVbe5guMb0kAfMXvB6bIJyraVMzvNXVa4ZoMDtMiB1foMhW0GyWAio");'>
+<div class="flex flex-col items-center justify-center h-full bg-black/10 p-6 text-white text-center">
+<img alt="App Logo" class="h-12 w-12 mb-4 opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZZmtQpyhOLLCsd7Vq12X7u2OxzNh59SiGnDucK7iMT3Jkdv6AfoadMp7MV3_pqHiWR-4uiqYxkk7PdIVZh_9IMi_P-SKkw3eJSF0_lykXeYppA0l0I8QZ48MImSAfcvYJTljUpRH0u6dcx650TLvzECvPdV__IRYWB3ymaHhoQzyRF1eQInojv57R7hzdQzdRcgM5fb0He6Avrc9SnS9gBXikRDgj6paU-RESRvv3a_9IZMYI-qCzZpqqLGWsitbtbszwYAIta9U"/>
+<p class="font-medium text-lg">英単語上級テスト</p>
+<h1 class="font-extrabold text-7xl my-4">95<span class="text-3xl font-semibold">/100</span></h1>
+<div class="flex gap-6 text-base">
+<div>
+<p class="opacity-80">正答数</p>
+<p class="font-bold text-xl">19/20</p>
+</div>
+<div>
+<p class="opacity-80">学習時間</p>
+<p class="font-bold text-xl">10:32</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Text Field -->
+<div class="flex max-w-[480px] flex-wrap items-end gap-4 pt-6">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal pb-2">共有メッセージ</p>
+<textarea class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark focus:border-primary min-h-28 placeholder:text-subtle-light dark:placeholder:text-subtle-dark p-[15px] text-base font-normal leading-normal" placeholder="">「StudyApp」で英単語上級テストに挑戦！スコアは95点でした！</textarea>
+</label>
+</div>
+<!-- Chips / Hashtags -->
+<div class="flex gap-2 p-3 flex-wrap -ml-1">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary px-3 transition-colors">
+<p class="text-sm font-medium leading-normal">#StudyApp</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary px-3 transition-colors">
+<p class="text-sm font-medium leading-normal">#今日の学習</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary px-3 transition-colors">
+<p class="text-sm font-medium leading-normal">#学習記録</p>
+</button>
+</div>
+<!-- Share Section -->
+<div class="mt-4">
+<h4 class="text-subtle-light dark:text-subtle-dark text-sm font-bold leading-normal tracking-[0.015em] py-2 text-center">共有先を選択</h4>
+<div class="mt-2 grid grid-cols-4 gap-4 text-center">
+<div class="flex flex-col items-center gap-2 cursor-pointer">
+<div class="flex h-14 w-14 items-center justify-center rounded-xl bg-border-light dark:bg-border-dark">
+<img alt="X Logo" class="h-7 w-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA86Zrlo5-ufxoflxQRtcBOR_4Y4ZkAEtfnl0MxZbOp8nXxpbwhhJLoivUltj5UmDLfUvcvfqShaMFqWQ3qoMQ7qAoQUMsPNODPvZRvsHCm1sMTu4PT2CvzqoBrQOmCRx_94CqAPBirHyhkrBUR8yVwKtT5OPpBMaXqSGHJJ9GGrjLkpurjg2nMPJ_3l1BKDdKaiVJhK__tCPgRUM-gULblCSBCgVv-UbHH6JH9LINwNxSosJ5oTDjf8Q8li0RuGjVvsjVRcZtCp0M"/>
+</div>
+<p class="text-xs text-subtle-light dark:text-subtle-dark font-medium">X</p>
+</div>
+<div class="flex flex-col items-center gap-2 cursor-pointer">
+<div class="flex h-14 w-14 items-center justify-center rounded-xl bg-border-light dark:bg-border-dark">
+<img alt="Line Logo" class="h-7 w-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr6Q3QI8JK0hvXmFFwF6ynpsBF48aUEMjctD_rlSJVH7yLmiNw8OIddOyWQdueDzIoPzTt9hodDc8Dn1X3hcQplX3wFIy4bB_kzX5DAv9HiRziC6XLmR6V6qlmskz6XB9y0CDd-AG2upnkN7QJgsojtv7GoUxz14iZpU_tracR3chs2MwwnboXlfjVxwKnirJM77DmJN-rYXMYLBQD7EdKzKEg3AfCq1q0bp76ok0YB7vvfkbDw33Y5Jp3sIUYYx-c_svR5aWutXc"/>
+</div>
+<p class="text-xs text-subtle-light dark:text-subtle-dark font-medium">LINE</p>
+</div>
+<div class="flex flex-col items-center gap-2 cursor-pointer">
+<div class="flex h-14 w-14 items-center justify-center rounded-xl bg-border-light dark:bg-border-dark">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark text-3xl">link</span>
+</div>
+<p class="text-xs text-subtle-light dark:text-subtle-dark font-medium">リンクをコピー</p>
+</div>
+<div class="flex flex-col items-center gap-2 cursor-pointer">
+<div class="flex h-14 w-14 items-center justify-center rounded-xl bg-border-light dark:bg-border-dark">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark text-3xl">more_horiz</span>
+</div>
+<p class="text-xs text-subtle-light dark:text-subtle-dark font-medium">その他</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom CTA Bar -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm border-t border-border-light dark:border-border-dark">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center h-12 w-12 shrink-0 rounded-lg border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark hover:bg-border-light dark:hover:bg-border-dark transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+<button class="w-full flex-grow rounded-lg bg-primary h-12 text-white font-bold text-base leading-normal text-center flex items-center justify-center hover:bg-primary/90 transition-colors">
+                共有する
+            </button>
+</div>
+</div>
+</div>
+</body></html>
